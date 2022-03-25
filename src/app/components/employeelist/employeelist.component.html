@@ -1,0 +1,32 @@
+<div class="containter">
+    <div class="container fluid">
+
+
+        <div class="row">
+
+            <h1 class="text-center">List of Employees</h1>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employeelist of employees">
+                        <td>{{employeelist.id}}</td>
+                        <td>{{employeelist.name}}</td>
+                        <td>{{employeelist.email}}</td>
+                        <td>{{employeelist.department}}</td>
+                        <td><button class="btn btn-danger btn-xs" (click)="deleteEmployee(employeelist.id)">
+                                <span class="glyphicon glyphicon-remove"></span>Delete</button> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
